@@ -1,0 +1,3 @@
+#!/bin/sh
+# path: /etc/local.d/qemu.stop
+echo "system_powerdown" | socat - UNIX-CONNECT:/tmp/qemu-monitor.sock
