@@ -7,6 +7,7 @@ while true; do
     -s \
     https://api.github.com/user/codespaces/xxxxxxxxxxxxxxx/start \
     > /tmp/github_request.log 2>&1
-    echo $(date) > /tmp/github_request.log
-  sleep 5
+  sleep 2.5
+  echo $(date) > /tmp/github_request.log
+  sleep 2.5
 done
