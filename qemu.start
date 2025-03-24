@@ -1,0 +1,3 @@
+#!/bin/bash
+# path: /etc/local.d/qemu.start
+screen -dmS qemu /opt/qemu.sh
