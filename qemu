@@ -1,1 +1,0 @@
-qemu-system-x86_64 -drive file=ubuntu22.qcow2,format=qcow2 -virtfs local,path=/opt/shared,mount_tag=shared,security_model=none -m 7G -net nic,model=virtio -monitor unix:/tmp/qemu-monitor.sock,server,nowait -enable-kvm -cpu host -smp $(nproc) -net user,hostfwd=tcp::2222-:22 | tee -a /var/log/qemu.log
