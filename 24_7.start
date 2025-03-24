@@ -1,2 +1,3 @@
 #!/bin/sh
 # path: /etc/local.d/24_7.start
+/opt/github_request.sh &
