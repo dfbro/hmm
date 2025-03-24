@@ -1,5 +1,5 @@
 #!/bin/bash
-#/opt/qemu.sh
+# path: /opt/qemu.sh
 # Function to send ACPI shutdown to QEMU
 shutdown_qemu() {
     echo "Sending ACPI shutdown to QEMU..."
