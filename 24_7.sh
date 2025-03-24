@@ -6,7 +6,7 @@ while true; do
     -H "X-GitHub-Api-Version: 2022-11-28" \
     -s \
     https://api.github.com/user/codespaces/xxxxxxxxxxxxxxx/start \
-    >> /tmp/github_request.log 2>&1
-    echo $(date) >> /tmp/github_request.log
+    > /tmp/github_request.log 2>&1
+    echo $(date) > /tmp/github_request.log
   sleep 5
 done
