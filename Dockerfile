@@ -1,15 +1,18 @@
 FROM alpine
 
 # Install curl and ca-certificates without cache
-RUN apk add --update --no-cache curl ca-certificates
+RUN apk add --no-cache curl ca-certificates
 
-# Set environment variables (defaults can be overridden at runtime)
+# Set environment variables
 ENV GH_TOKEN=""
 ENV cs_name=""
 
-# Copy the start script into the image
+# Create /etc/resolv.conf with Cloudflare DNS
+RUN echo 'nameserver 1.1.1.1\nnameserver 1.0.0.1' > /etc/resolv.conf
+
+# Copy the start script
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-# Set the script as the entrypoint
+# Run the script
 ENTRYPOINT ["/start.sh"]
